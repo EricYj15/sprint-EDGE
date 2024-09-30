@@ -35,4 +35,62 @@ Este projeto faz parte da solução proposta para a Mahindra chamada "Acelerando
 +------------------+        +-------------+           +-----------------+
 |  LED Verde/LED R  |        | Servo Motor |           |  Controle via   |
 +------------------+        +-------------+           |   Interface     |
-                                                     +-----------------+
+```
+
+Recursos Necessários
+1. Dispositivos IoT
+Arduino Uno: Microcontrolador para ler os dados do sensor.
+Sensor DHT11: Sensor de temperatura e umidade.
+LEDs: Verde e Vermelho para representar estados da temperatura.
+Servo Motor: Para simular reações mecânicas ao aumento da temperatura.
+Cabos de conexão: Fios jumper para as ligações entre os componentes.
+Protoboard: Para montar o circuito.
+2. Back-end
+Node-RED: Software de programação visual para conectar e processar os dados do Arduino.
+Servidor Local ou Nuvem: Para hospedar o Node-RED e a dashboard.
+Biblioteca ArduinoJson: Para converter os dados em JSON e enviá-los ao Node-RED.
+3. Front-end
+Dashboard Node-RED: Interface web para visualização dos dados.
+API de Comunicação Serial: Para receber dados do Arduino via porta USB.
+Instruções de Uso
+1. Montagem do Circuito
+Conecte o sensor DHT11 ao pino digital 7 do Arduino Uno.
+Conecte o LED verde ao pino digital 13 e o LED vermelho ao pino digital 12.
+Conecte o servo motor ao pino digital 11.
+Monte o circuito em uma protoboard usando cabos jumper para fazer as conexões com o Arduino.
+2. Configuração do Ambiente de Desenvolvimento
+Instale o Arduino IDE: Para programar o Arduino.
+
+Download Arduino IDE
+Instale as bibliotecas necessárias no Arduino IDE:
+
+Vá para Sketch > Incluir Biblioteca > Gerenciar Bibliotecas...
+Instale a biblioteca DHT Sensor Library by Adafruit.
+Instale a biblioteca ArduinoJson.
+Instale a biblioteca Servo.
+Configure o Node-RED:
+
+Instale o Node-RED no seu sistema.
+Abra o Node-RED e configure um fluxo para receber os dados via porta serial.
+Use a biblioteca node-red-dashboard para criar uma interface gráfica.
+3. Upload do Código para o Arduino
+Copie o código fornecido no Arduino IDE.
+Selecione a placa Arduino Uno em Ferramentas > Placa > Arduino Uno.
+Selecione a porta COM correta em Ferramentas > Porta.
+Faça o upload do código para o Arduino.
+4. Execução do Projeto
+Conecte o Arduino ao computador.
+Inicie o Node-RED e abra a interface da dashboard.
+Visualize os dados de temperatura e umidade atualizados na dashboard em tempo real.
+Observe as mudanças nos LEDs e no servo motor com base nos valores de temperatura.
+Requisitos
+Arduino Uno
+Node.js com o Node-RED instalado
+Bibliotecas ArduinoJson, DHT11 e Servo
+Browser compatível com Node-RED Dashboard
+Ambiente físico (Protoboard, LEDs, Servo Motor, Fios Jumper)
+Dependências
+Arduino IDE: Instalar aqui
+Node.js: Instalar aqui
+Biblioteca Node-RED Dashboard: Instale no Node-RED com o comando:
+npm install node-red-dashboard
