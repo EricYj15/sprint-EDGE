@@ -1,0 +1,634 @@
+[
+    {
+        "id": "7afd7233f25ab894",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1dc51f46ba5a0567",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "6deb0d4efa21f2b3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a3dce0bf04722f2b",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "2dc95e5edd4255ce",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6c8620d7776d2639",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e490e445e7396706",
+        "type": "ui_group",
+        "name": "Pressão",
+        "tab": "2dc95e5edd4255ce",
+        "order": 1,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9a362c76890981f7",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "2dc95e5edd4255ce",
+        "order": 2,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "597a105ea7109939",
+        "type": "ui_group",
+        "name": "Nuvens",
+        "tab": "2dc95e5edd4255ce",
+        "order": 3,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2dc95e5edd4255ce",
+        "type": "ui_tab",
+        "name": "São Paulo - Interlagos",
+        "icon": "fa-flag-checkered",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b2a8e66145084ddd",
+        "type": "json",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "0237aa1e180e78b7",
+                "8e665f14e0fc91b3",
+                "c3c855ba7926e4b2"
+            ]
+        ]
+    },
+    {
+        "id": "e33ed539f4a3cae7",
+        "type": "serial in",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "serial": "1dc51f46ba5a0567",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "b2a8e66145084ddd"
+            ]
+        ]
+    },
+    {
+        "id": "0237aa1e180e78b7",
+        "type": "change",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 140,
+        "wires": [
+            [
+                "41f6e1e9953fd1e5"
+            ]
+        ]
+    },
+    {
+        "id": "8e665f14e0fc91b3",
+        "type": "change",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 260,
+        "wires": [
+            [
+                "3834c0bd9e16a18a"
+            ]
+        ]
+    },
+    {
+        "id": "41f6e1e9953fd1e5",
+        "type": "ui_gauge",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "group": "a3dce0bf04722f2b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c3c855ba7926e4b2",
+        "type": "mqtt out",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "topic": "FIAP/CORINTHIANS",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6c8620d7776d2639",
+        "x": 300,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "3834c0bd9e16a18a",
+        "type": "ui_gauge",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "group": "a3dce0bf04722f2b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1010,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "dd1362790434757c",
+        "type": "http request",
+        "z": "7afd7233f25ab894",
+        "name": "São Paulo - Interlagos",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?lat=-23.533773&lon=-46.625290&appid=a669c7581a465a7a7c6ca5cea61e378f&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "6919557d49ff474b"
+            ]
+        ]
+    },
+    {
+        "id": "666cb5464939de14",
+        "type": "inject",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 700,
+        "wires": [
+            [
+                "dd1362790434757c"
+            ]
+        ]
+    },
+    {
+        "id": "6919557d49ff474b",
+        "type": "json",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "1ac8c8f0c21b0a59",
+                "9b6ee5a41d7d32e2",
+                "f1d9e7d37aae4a85"
+            ]
+        ]
+    },
+    {
+        "id": "1ac8c8f0c21b0a59",
+        "type": "change",
+        "z": "7afd7233f25ab894",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 460,
+        "wires": [
+            [
+                "bea0392697c21d9b"
+            ]
+        ]
+    },
+    {
+        "id": "9b6ee5a41d7d32e2",
+        "type": "change",
+        "z": "7afd7233f25ab894",
+        "name": "Pressão",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.pressure",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 520,
+        "wires": [
+            [
+                "241b6ceaf691b1a2"
+            ]
+        ]
+    },
+    {
+        "id": "241b6ceaf691b1a2",
+        "type": "ui_gauge",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "group": "e490e445e7396706",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Pressão",
+        "label": "Psi",
+        "format": "{{value}}",
+        "min": "900",
+        "max": "1200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1060,
+        "y": 520,
+        "wires": [],
+        "icon": "font-awesome/fa-sun-o"
+    },
+    {
+        "id": "bea0392697c21d9b",
+        "type": "ui_gauge",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "group": "9a362c76890981f7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 460,
+        "wires": [],
+        "icon": "font-awesome/fa-sun-o"
+    },
+    {
+        "id": "f1d9e7d37aae4a85",
+        "type": "change",
+        "z": "7afd7233f25ab894",
+        "name": "Nuvens",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.clouds.all",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 640,
+        "wires": [
+            [
+                "6eb1869fe188cbce"
+            ]
+        ]
+    },
+    {
+        "id": "6eb1869fe188cbce",
+        "type": "ui_gauge",
+        "z": "7afd7233f25ab894",
+        "name": "",
+        "group": "597a105ea7109939",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Nuvens",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1060,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c27330dcabfee88c",
+        "type": "change",
+        "z": "7afd7233f25ab894",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    }
+]
